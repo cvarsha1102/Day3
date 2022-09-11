@@ -1,0 +1,16 @@
+//Flags 
+const xh=new XMLHttpRequest();
+xh.open("GET","https://restcountries.com/v3.1/all")
+xh.send();
+xh.responseType="json"
+xh.onload=function displayFlag()
+{
+	const countries=xh.response;
+    count=0;
+	 for(country of countries)
+    	{
+       		 console.log(++count,country.flags.png);
+    	}
+    
+      
+}

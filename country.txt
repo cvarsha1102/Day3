@@ -1,0 +1,15 @@
+//name,region,subregion,population
+const xh=new XMLHttpRequest();
+xh.open("GET","https://restcountries.com/v3.1/all")
+xh.send();
+xh.responseType="json"
+xh.onload=function displayFlag()
+{
+	const countries=xh.response;
+    count=0;
+     for(country of countries)
+        {
+            console.log(`${++count} name:${country.name.common} region:${country.region} subregion:${country.subregion} population:${country.population}`)
+        }
+    
+}

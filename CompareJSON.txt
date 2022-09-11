@@ -1,0 +1,16 @@
+1.compare 2 json having same properties without order
+
+var obj1={name:"Person",age:"5"}
+var obj2={age:"5",name:"Person1"}
+for(var i in obj1)
+{
+    for(var j in obj2)
+    {
+        if(i==j)
+        {
+            console.log("equal")
+
+        }
+       
+    }
+}
